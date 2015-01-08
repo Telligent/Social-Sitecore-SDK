@@ -5,6 +5,10 @@
 Sitecore.Client.dll
 Sitecore.Kernel.dll
 
+#builds
+[Bb]in
+obj
+
 # User-specific files
 *.suo
 *.user
