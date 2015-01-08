@@ -7,8 +7,8 @@ This SDK is currently a work in progress and currently in active development.  T
 The Sitecore SDK requires that you have installed and are running Zimbra Social and Sitecore.  As Such this SDK has dependencies on libraries that for licesing reasons are not made available as part of this SDK.  You will need to obtain these libraries from their resepctive installations and copy them to the */lib* folder before compliling.  They are listed below.
 
 **Sitecore**
--Sitecore.Client.dll
--Sitecore.Kernel.dll
+- Sitecore.Client.dll
+- Sitecore.Kernel.dll
 
 **Zimbra Social**
 
