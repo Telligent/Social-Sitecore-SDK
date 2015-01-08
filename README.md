@@ -1,0 +1,2 @@
+# sitecoresocialsdk
+Sitecore Social SDK
