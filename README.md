@@ -23,6 +23,6 @@ The SDK is a developer platform/framework to allow you to to interact with Zimbr
 REST is a great way to integrate with any third party site becasue it is technology independent and becasue of its use of standard XML and JSON for data transfer.  It is still a viable integration.  The SDK is more of a remoting infrastructure.  It still relies on HTTP to interact with Zimbra social, however it is remotely invoking the Social Widget APIs versus the REST APIs and instead of XML and JSON, you receive dynamic objects that allow you to interact with the data much like you would the strongly types classes inside Zimbra Social.  For that reason it is does require the same version of the .NET framework as your Zimbra Social site.   In addition the SDK handles authentication via Oauth for you meaning with some simple configuration you do not have to implement the Oauth flow yourself.
 
 ####Where is the documentation?
-Documentation will be in the Developer Documents area for Zimbra Social at community.zimbra.com.   Also there is another repo with several examples you can use as a starting point for your project.
+Documentation will be in the Developer Documents area for Zimbra Social at community.zimbra.com.   Also there is another samples repo with several examples you can use as a starting point for your project.  (https://github.com/Zimbra/Social-SitecoreSDK-Samples)
 
 ####How do I report a bug?
