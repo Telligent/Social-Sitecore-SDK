@@ -13,7 +13,7 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
 {
     public static class Api
     {
-        public static RemoteScriptedContentFragmentHost GetHost(string hostName,bool forceRegister = false)
+        public static SitecoreHost GetHost(string hostName,bool forceRegister = false)
         {
             var config = Factory.GetConfigNode("Zimbra/hosts/host[@name='" + hostName + "']");
             if (config == null)
@@ -32,7 +32,7 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
             }
                
 
-            return host;
+            return host as SitecoreHost;
         }
 
         public static void Register(SitecoreHost host)
@@ -40,5 +40,8 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
             RemoteScriptedContentFragmentHost.Register(host);
             OAuthAuthentication.RegisterConfiguration(host);
         }
+
+      
+        
     }
 }

@@ -71,6 +71,40 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
 
         public virtual string Name { get; private set; }
 
+        public virtual string InitiateLogin(string returnUrl)
+        {
+            if (_enableUserCreation && _enableSync)
+            {
+                if (string.IsNullOrEmpty(returnUrl))
+                    throw new ArgumentException("returnUrl is reuired","returnUrl");
+
+                NameValueCollection nvc = new NameValueCollection();
+                nvc.Add("rtn", returnUrl);
+                var evoUser = Telligent.Evolution.Extensibility.OAuthClient.Version1.OAuthAuthentication.GetAuthenticatedUser(Id, nvc, (x) => returnUrl = x.OriginalString);
+            
+            }
+            return returnUrl;
+           
+        }
+
+        public string InitiateLogout(string returnUrl)
+        {
+
+            if (_enableSync && _enableUserCreation)
+            {
+                if (string.IsNullOrEmpty(returnUrl))
+                    throw new ArgumentException("returnUrl is reuired", "returnUrl");
+
+                NameValueCollection nvc = new NameValueCollection();
+                nvc.Add("rtn", returnUrl);
+                var evoUri = Telligent.Evolution.Extensibility.OAuthClient.Version1.OAuthAuthentication.EvolutionLogOut(Id, nvc);
+                if (evoUri != null)
+                    returnUrl = evoUri.OriginalString;
+            }
+            Telligent.Evolution.Extensibility.OAuthClient.Version1.OAuthAuthentication.LogOut(Id);
+
+            return returnUrl;
+        }
         #endregion
 
 
@@ -499,7 +533,7 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
         }
         #endregion
 
+        
 
-      
     }
 }
