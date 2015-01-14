@@ -76,7 +76,7 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
             if (_enableUserCreation && _enableSync)
             {
                 if (string.IsNullOrEmpty(returnUrl))
-                    throw new ArgumentException("returnUrl is reuired","returnUrl");
+                    throw new ArgumentException("returnUrl is required","returnUrl");
 
                 NameValueCollection nvc = new NameValueCollection();
                 nvc.Add("rtn", returnUrl);
@@ -93,7 +93,7 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
             if (_enableSync && _enableUserCreation)
             {
                 if (string.IsNullOrEmpty(returnUrl))
-                    throw new ArgumentException("returnUrl is reuired", "returnUrl");
+                    throw new ArgumentException("returnUrl is required", "returnUrl");
 
                 NameValueCollection nvc = new NameValueCollection();
                 nvc.Add("rtn", returnUrl);
