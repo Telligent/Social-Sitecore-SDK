@@ -47,13 +47,12 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telligent.Evolution.Extensions.OAuthAuthentication, Version=1.0.0.20156, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Telligent.Evolution.Extensions.OAuthAuthentication, Version=1.0.18.39526, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\Telligent.Evolution.Extensions.OAuthAuthentication.dll</HintPath>
     </Reference>
-    <Reference Include="Telligent.Evolution.RemoteScriptedContentFragments, Version=2.0.31.40006, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\Telligent.Evolution.RemoteScriptedContentFragments.dll</HintPath>
+    <Reference Include="Telligent.Rest.SDK">
+      <HintPath>..\lib\Telligent.Rest.SDK.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

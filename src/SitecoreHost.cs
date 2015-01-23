@@ -13,14 +13,13 @@ using System.Xml;
 using Sitecore;
 using Sitecore.Configuration;
 using Telligent.Evolution.Extensibility.OAuthClient.Version1;
-using Telligent.Evolution.Extensibility.Storage.Version1;
-using Telligent.Evolution.Extensibility.UI.Version1;
+using Telligent.Evolution.Extensibility.Rest.Version1;
 
 
 namespace Zimbra.Social.RemotingSDK.Sitecore
 {
 
-    public class SitecoreHost : RemoteScriptedContentFragmentHost, IUserCreatableOAuthClientConfiguration,
+    public class SitecoreHost : RestHost, IUserCreatableOAuthClientConfiguration,
         IUserSynchronizedOAuthClientConfiguration
     {
         private static readonly string LanguageContextKey = "Sitecore-User-Language";
@@ -30,7 +29,6 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
         private bool _enableUserCreation;
         private bool _generateSitecoreUrls;
         private Guid _id;
-        private IList<IScriptedContentFragmentExtension> _extensions;
         private string _callbackUrl;
         private string _communityStartItem;
         private string _connectorHandlerUrl = "";
@@ -132,17 +130,7 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
             request.Credentials = EvolutionCredentials;
         }
 
-        public override string CallbackUrl
-        {
-            get { return GetCurrentHttpContext().Response.ApplyAppPathModifier(_callbackUrl); }
-        }
-
-        public override void DeserializeContext(System.Web.HttpContextBase context, string contextData)
-        {
-            var contextKeys = HttpUtility.ParseQueryString(contextData);
-            context.Items.Add(LanguageContextKey, contextKeys[LanguageContextKey]);
-            context.Items.Add(SiteContextKey, contextKeys[SiteContextKey]);
-        }
+     
 
         public override string EvolutionRootUrl
         {
@@ -151,48 +139,8 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
 
        
 
-        public override bool GetAccessingUserIsAuthenticated()
-        {
-            var user = GetAccessingUser();
-            return (user == null && string.Compare(user.UserName, _defaultUserName) != 0);
-        }
-
-        public override string GetAccessingUserLanguageKey()
-        {
-            var user = GetAccessingUser();
-            if (user == null) return _defaultLanguageKey;
-            return user.LanguageKey;
-        }
-
-        public override string GetConfiguration(string hostIdentifier)
-        {
-
-            return string.Empty;
-        }
-
-        public override IFile GetFile(Guid instanceIdentifier, string fileName)
-        {
-            return null;
-        }
-
-        public override IEnumerable<IFile> GetSourceFiles()
-        {
-            return null;
-        }
-
-        public override Guid Id
-        {
-            get { return _id; }
-        }
-
-        public override string SerializeContext(System.Web.HttpContextBase context)
-        {
-            return string.Empty;
-        }
-        public override IEnumerable<IScriptedContentFragmentExtension> Extensions
-        {
-            get { return base.PlatformExtensions; }
-        }
+      
+      
         #endregion
 
         #region OAuth Client Options
@@ -533,7 +481,12 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
         }
         #endregion
 
-        
 
+
+
+        public override Guid Id
+        {
+            get { return _id  ; }
+        }
     }
 }

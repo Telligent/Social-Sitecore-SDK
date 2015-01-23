@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Sitecore.Configuration;
 using Telligent.Evolution.Extensibility.OAuthClient.Version1;
-using Telligent.Evolution.Extensibility.UI.Version1;
+using Telligent.Evolution.Extensibility.Rest.Version1;
 
 
 namespace Zimbra.Social.RemotingSDK.Sitecore
@@ -24,7 +24,7 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
                 throw new ConfigurationErrorsException("host node must contain a valid guid id");
 
             
-            var host = RemoteScriptedContentFragmentHost.Get(id.Value);
+            var host = RestHost.Get(id.Value);
             if (host == null && forceRegister)
             {
                 host = new SitecoreHost(hostName);
@@ -37,7 +37,7 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
 
         public static void Register(SitecoreHost host)
         {
-            RemoteScriptedContentFragmentHost.Register(host);
+            RestHost.Register(host);
             OAuthAuthentication.RegisterConfiguration(host);
         }
 
