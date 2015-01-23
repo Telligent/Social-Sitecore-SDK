@@ -3,15 +3,17 @@
 >###***BETA Disclaimer
 This SDK is currently a work in progress and currently in active development.  This means it is subject to change at any time and is not currently appropriate for production use.  The beta version is appropriate for testing and initial development with that understanding.
 
+####Software Reqauirements
+- Zimbra Community 8.0+
+- Sitecore 7.5 +
+- .NET Framework 4.5
+
 ####Depedencies
 The Sitecore SDK requires that you have installed and are running Zimbra Social and Sitecore.  As Such this SDK has dependencies on libraries that for licensing reasons are not made available as part of this SDK.  You will need to obtain these libraries from their resepctive installations and copy them to the */lib* folder before compliling.  They are listed below.
 
 **Sitecore**
 - Sitecore.Client.dll
 - Sitecore.Kernel.dll
-
-**Zimbra Social**
-
 
 
 ###What is the SDK?
