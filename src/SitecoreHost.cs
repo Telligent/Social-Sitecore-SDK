@@ -394,10 +394,6 @@ namespace Zimbra.Social.RemotingSDK.Sitecore
             if (string.IsNullOrWhiteSpace(_evolutionRootUrl))
                 throw new ConfigurationErrorsException("You must specify an social site url on the host or hosts node");
 
-            _callbackUrl = config.GetStringAttributeValueOrDefault("callbackUrl", null);
-            if (string.IsNullOrWhiteSpace(_callbackUrl))
-                throw new ConfigurationErrorsException("You must specify a callback url");
-
          
             _oauthClientId = config.GetStringAttributeValueOrDefault("oauthClientId", null);
             if (string.IsNullOrWhiteSpace(_oauthClientId))
