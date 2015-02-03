@@ -7,8 +7,8 @@
     <ProjectGuid>{5A15B960-D9BC-43B3-95B4-360B22DA69F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Zimbra.Social.RemotingSDK.Sitecore</RootNamespace>
-    <AssemblyName>Zimbra.Social.RemotingSDK.Sitecore</AssemblyName>
+    <RootNamespace>Telligent.SitecoreSDK</RootNamespace>
+    <AssemblyName>Telligent.SitecoreSDK</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -52,15 +52,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api.cs" />
-    <Compile Include="ExtensionsForXmlNode.cs" />
-    <Compile Include="SitecoreHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SitecoreLocalUserResolver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web\App_Config\Include\Zimbra.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Web\communityServer_SDK.config" />
     <None Include="Web\oauth.ashx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
