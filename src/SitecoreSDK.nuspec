@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>TelligentCommunityServerSDKForSitecore</id>
+        <version>1.0.0</version>
+        <title>Telligent Community Server SDK for Sitecore</title>
+        <authors>Telligent</authors>
+        <owners>Telligent</owners>
+        <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/Zimbra/Social-Sitecore-SDK</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A Sitecore specific implementation of the Telligent Community Server REST SDK</description>
+        <releaseNotes>BETA- Not for Production Use</releaseNotes>
+        <copyright>Copyright 2015 Telligent</copyright>
+    </metadata>
+    <files>
+	    <file src="bin\Release\Telligent.SitecoreSDK.dll" target="lib\net45\Telligent.SitecoreSDK.dll" />
+    </files>
+	<dependencies>
+	  <dependency id="CommunityServerSDK" version="1.0.0.0" />
+	</dependencies>
+</package>
