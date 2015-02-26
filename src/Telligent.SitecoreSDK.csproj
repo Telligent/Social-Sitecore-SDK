@@ -49,19 +49,12 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telligent.Rest.SDK, Version=1.0.12.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\CommunityServerSDK.1.0.12\lib\net45\Telligent.Rest.SDK.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SitecoreLocalUserResolver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="communityServer_SDK.config" />
-    <None Include="oauth.ashx" />
-    <None Include="packages.config" />
     <None Include="Web\communityServer_SDK.config" />
     <None Include="Web\oauth.ashx" />
   </ItemGroup>
