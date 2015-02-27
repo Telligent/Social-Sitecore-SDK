@@ -12,11 +12,12 @@
         <description>A Sitecore specific implementation of the Telligent Community Server REST SDK</description>
         <releaseNotes>BETA- Not for Production Use</releaseNotes>
         <copyright>Copyright 2015 Telligent</copyright>
+		<dependencies>
+	  <dependency id="CommunityServerSDK" version="1.0.0.0" />
+	</dependencies>
     </metadata>
     <files>
 	    <file src="bin\Release\Telligent.SitecoreSDK.dll" target="lib\net45\Telligent.SitecoreSDK.dll" />
     </files>
-	<dependencies>
-	  <dependency id="CommunityServerSDK" version="1.0.0.0" />
-	</dependencies>
+	
 </package>
