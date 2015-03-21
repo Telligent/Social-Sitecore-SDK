@@ -3,36 +3,50 @@
 >###***BETA Disclaimer
 This SDK is currently a work in progress and currently in active development.  This means it is subject to change at any time and is not currently appropriate for production use.  The beta version is appropriate for testing and initial development with that understanding.
 
-####Software Reqauirements
-- Zimbra Community 8.0+
-- Sitecore 7.5 +
-- .NET Framework 4.5
-
-####Depedencies
-The Sitecore SDK requires that you have installed and are running Zimbra Social and Sitecore.  As Such this SDK has dependencies on libraries that for licensing reasons are not made available as part of this SDK.  You will need to obtain these libraries from their resepctive installations and copy them to the */lib* folder before compliling.  They are listed below.
+####Dependencies
+The Sitecore SDK requires that you have installed and are running Zimbra Social (minimum version 8.5) and Sitecore (minimum version 7.5) or have access to cloud/SaaS versions of these products.  The Sitecore SDK for Zimbra Social has dependencies on libraries that, for licensing reasons, are included.  You will need to obtain the libraries listed below and copy them to the */lib* folder before compiling:
 
 **Sitecore**
+— Sitecore 7.5 or higher
 - Sitecore.Client.dll
 - Sitecore.Kernel.dll
 
+**Zimbra Social**
+- Zimbra Social (free or commercial) 8.0 or higher
+- [Zimbra Social REST SDK](https://github.com/Zimbra/Social-Rest-SDK/)
 
-###What is the SDK?
-The SDK is a developer platform/framework to allow you to to interact with Zimbra Social content from inside Sitecore.
+**.NET Framework**
+- version 4.5 or higher
 
-####Is this the same as Zimbra Connect for Sitecore?
-No and they are not compatible to be run together.  While the technology behind the connector and this SDK are the same, the SDK is meant to provide lower level access to the remoting framework than the connector.  The connector is best described as a full product implementation on the underlying remoting framework.  The SDK is built on that framework but does not use widget rendering and exposes API access the to the remoting framework whereas the connector did not.  This made custom work very challenging in the connector whereas the SDK is developer focused.
+###What is the Sitecore SDK for Zimbra Social?
+The Sitecore SDK for Zimbra Social is a framework to allow you to easily interact with Zimbra Social content from inside Sitecore. The entire Zimbra Social platform is available through these APIs and allows you to natively add blogs, forums, wikis, comments, ratings and more natively running within Sitecore. Samples are available that demonstrate how this can be done [Sitecore SDK for Zimbra Social samples](https://github.com/Zimbra/Social-SitecoreSDK-Samples).
 
-####What makes this different from using the Zimbra Social REST API?
-REST is a great way to integrate with any third party site becasue it is technology independent and becasue of its use of standard XML and JSON for data transfer.  It is still a viable integration.  The SDK is more of a remoting infrastructure.  It still relies on HTTP to interact with Zimbra social, however it is remotely invoking the Social Widget APIs versus the REST APIs and instead of XML and JSON, you receive dynamic objects that allow you to interact with the data much like you would the strongly types classes inside Zimbra Social.  For that reason it is does require the same version of the .NET framework as your Zimbra Social site.   In addition the SDK handles authentication via Oauth for you meaning with some simple configuration you do not have to implement the Oauth flow yourself.
+The Sitecore SDK for Zimbra Social adds Sitecore specific behaviors and functionality around the [Zimbra Social REST SDK](https://github.com/Zimbra/Social-Rest-SDK/).
 
-####Whats the difference between this and Remote Studio Widgets?
-I am so glad you asked! Nothing.  This SDK is an implementation of Remote Studio Widgets.  It just so happens we did some of the busy work for you surrounding user identification, authentication and configuration.  These are the most challenging parts of an RSW implementation.
+####Is this the same as Zimbra Connector for Sitecore?
+No, Zimbra Connector for Sitecore (last release is version 3) is the predecessor to the Sitecore SDK for Zimbra Social. While the technology behind the Zimbra Connector for Sitecore and the Sitecore SDK for Zimbra Social are the same, the Sitecore SDK for Zimbra Social was built specifically from the feedback of partners and customers that had previously used the Zimbra Connector for Sitecore integration. 
+
+The Zimbra Connector for Sitecore utilized remote widget rendering to allow any Zimbra Social widget to render within Sitecore. While this enabled any Zimbra Social widget to easily run within Sitecore, it limited the control that developers had over the rendering.
+
+The Sitecore SDK for Zimbra Social does not use the remote widget rendering, but instead is designed to give developers more direct access to the RESTful Platform APIs offered by Zimbra Social. 
+
+####Can I still use the Zimbra Social RESTful / Platform APIs directly?
+Yes, we believe RESTful APIs are a great way to integrate with any third party site because it is technology independent and because of its use of standard XML and JSON for data transfer. Developers working with Sitecore and Zimbra Social can absolutely still write REST API calls themselves.
+
+However, the Sitecore SDK for Zimbra Social is designed to make this much easier as it abstracts the remoting infrastructure. The Sitecore SDK for Zimbra Social still relies on HTTPS to interact with Zimbra Social, however it is remotely invoking API calls and returning .NET dynamic objects that allow you to interact with the data much like you would the strongly types classes inside Zimbra Social. For that reason it is does require the same version of the .NET framework as your Zimbra Social site. In addition the Sitecore SDK for Zimbra Social handles authentication via OAuth natively and you do not have to implement the OAuth flow yourself.
+
+Additionally, unique Sitecore specific integration will be added to the Sitecore SDK for Zimbra Social over time, such as integration with the Sitecore Experience User Database.
 
 ####What about performance?
-You still have to consider that the SDK is dependant on making HTTP requests to Zimbra Social so any hinderance in that communication can cause performance issues, same as a REST Api implementation.  You also need to consider how many requests are being made.  With REST this is easy to manage becasue you have to make the call yourself.  In the SDK the benefit of not having to do this can become a downside as well since it will make the calls it needs depending on the call.  In general for every one call to Host.ExecuteMethod() or Host.GetProperty() will result in at least 1 HTTP request, however as you interact with the returned dyanamic objects subsequent requests can be made under the covers.  The wiki will outline some of these considerations and also help youy choose if its truly appropriate to use the SDK in some scenarios.
+You still have to consider that the Sitecore SDK for Zimbra Social is dependent on making HTTPS requests to Zimbra Social. Any hinderance in that communication can cause performance issues similar to any out of process call (such as direct REST API calls or interactions with a database).
+
+Underlying the Sitecore SDK for Zimbra Social, the Zimbra Social REST SDK provides features to aid developers in getting optimal performance: API data trimming, async calls and API batching (API batching allows multiple API calls to be made over a single REST request).
 
 ####Where is the documentation?
-Please refer to the Wiki section of this repository
+Please refer to the [Wiki section](https://github.com/Zimbra/Social-Sitecore-SDK/wiki) of this repository.
 
 ####How do I report a bug?
-You can use the issues section of this repository
+You can use the [issues section](https://github.com/Zimbra/Social-Sitecore-SDK/issues) of this repository to report any issues with the Sitecore SDK for Zimbra Social.
+
+####Can I contribute?
+Yes, we will have more details soon on how you can contribute additions to the Sitecore SDK for Zimbra Social.
