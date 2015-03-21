@@ -7,7 +7,7 @@ This SDK is currently a work in progress and currently in active development.  T
 The Sitecore SDK requires that you have installed and are running Zimbra Social (minimum version 8.5) and Sitecore (minimum version 7.5) or have access to cloud/SaaS versions of these products.  The Sitecore SDK for Zimbra Social has dependencies on libraries that, for licensing reasons, are included.  You will need to obtain the libraries listed below and copy them to the */lib* folder before compiling:
 
 **Sitecore**
-— Sitecore 7.5 or higher
+- Sitecore 7.5 or higher
 - Sitecore.Client.dll
 - Sitecore.Kernel.dll
 
@@ -43,7 +43,7 @@ You still have to consider that the Sitecore SDK for Zimbra Social is dependent 
 Underlying the Sitecore SDK for Zimbra Social, the Zimbra Social REST SDK provides features to aid developers in getting optimal performance: API data trimming, async calls and API batching (API batching allows multiple API calls to be made over a single REST request).
 
 ####Where is the documentation?
-Please refer to the [Wiki section](https://github.com/Zimbra/Social-Sitecore-SDK/wiki) of this repository.
+Please refer to the [wiki section](https://github.com/Zimbra/Social-Sitecore-SDK/wiki) of this repository.
 
 ####How do I report a bug?
 You can use the [issues section](https://github.com/Zimbra/Social-Sitecore-SDK/issues) of this repository to report any issues with the Sitecore SDK for Zimbra Social.
