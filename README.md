@@ -1,7 +1,4 @@
 # Zimbra Social SDK for Sitecore
->###***BETA Disclaimer
-The Zimbra Social SDK for Sitecore is in beta and is subject to change at any time. It is not currently appropriate for production use. The beta version is appropriate for testing and initial development. We expect it will be production ready late March or early April 2015.
-
 ####Dependencies
 The Zimbra Social SDK for Sitecore requires that you have installed and are running Zimbra Social (minimum version 8.5) and Sitecore (minimum version 7.5) or have access to cloud/SaaS versions of these products. The Zimbra Social SDK for Sitecore has dependencies on libraries that, for licensing reasons, are not included. You will need to obtain the libraries listed below and copy them to the */lib* folder before compiling:
 
