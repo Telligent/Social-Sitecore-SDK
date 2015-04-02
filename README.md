@@ -39,10 +39,13 @@ You still have to consider that the Zimbra Social SDK for Sitecore is dependent 
 Underlying the Zimbra Social SDK for Sitecore, the Zimbra Social REST SDK provides features to aid developers in getting optimal performance: API data trimming, async calls and API batching (API batching allows multiple API calls to be made over a single REST request).
 
 ####Where is the documentation?
-Please refer to the [wiki section](https://github.com/Zimbra/Social-Sitecore-SDK/wiki) of this repository.
+Please refer to the [wiki section](https://github.com/Telligent/Social-Sitecore-SDK/wiki/) of this repository.
 
 ####How do I report a bug?
-You can use the [issues section](https://github.com/Zimbra/Social-Sitecore-SDK/issues) of this repository to report any issues with the Zimbra Social SDK for Sitecore.
+You can use the [issues section](https://github.com/Telligent/Social-Sitecore-SDK/issues/) of this repository to report any issues.
+
+####Where can I ask questions?
+Please visit our [developer community](http://community.zimbra.com/developers/f) to ask questions, get answers, collaborate and connect with other developers. Plus, give us feedback there so we can continue to improve these tools for you.
 
 ####Can I contribute?
-Yes, we will have more details soon on how you can contribute additions to the Zimbra Social SDK for Sitecore.
+Yes, we will have more details soon on how you can contribute.
