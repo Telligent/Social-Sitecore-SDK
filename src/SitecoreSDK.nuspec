@@ -7,7 +7,7 @@
         <authors>Telligent</authors>
         <owners>Telligent</owners>
         <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
-        <projectUrl>https://github.com/Zimbra/Social-Sitecore-SDK</projectUrl>
+        <projectUrl>https://github.com/Telligent/Social-Sitecore-SDK</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>A Sitecore specific implementation of the Telligent Community Server REST SDK</description>
         <releaseNotes>Initial Release</releaseNotes>
