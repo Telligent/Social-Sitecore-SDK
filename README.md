@@ -8,7 +8,7 @@ The Zimbra Social SDK for Sitecore requires that you have installed and are runn
 - Sitecore.Kernel.dll
 
 **Zimbra Social**
-- Zimbra Social (free or commercial) 8.0 or higher
+- Zimbra Social (free or commercial) 8.5 or higher
 - [Zimbra Social REST SDK v1.0.40 or higher](/Telligent/Social-Rest-SDK/)
 
 **.NET Framework**
