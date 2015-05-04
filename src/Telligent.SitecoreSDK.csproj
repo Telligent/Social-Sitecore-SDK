@@ -49,21 +49,20 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telligent.Rest.SDK, Version=0.0.19.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Telligent.Rest.SDK, Version=0.0.40.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\CommunityServerSDK.1.0.19\lib\net45\Telligent.Rest.SDK.dll</HintPath>
+      <HintPath>packages\CommunityServerSDK.1.0.40\lib\net45\Telligent.Rest.SDK.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pipelines\IntializeHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SitecoreLocalUserResolver.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App_Config\Include\Telligent.Rest.SDK.Sitecore.config" />
     <None Include="communityServer_SDK.config" />
     <None Include="oauth.ashx" />
     <None Include="packages.config" />
-    <None Include="Web\communityServer_SDK.config" />
-    <None Include="Web\oauth.ashx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

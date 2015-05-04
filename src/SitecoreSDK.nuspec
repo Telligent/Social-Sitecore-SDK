@@ -13,7 +13,7 @@
         <releaseNotes>Initial Release</releaseNotes>
         <copyright>Copyright 2015 Telligent</copyright>
 		<dependencies>
-	  <dependency id="CommunityServerSDK" version="1.0.0.0" />
+	  <dependency id="CommunityServerSDK" version="1.0.40.0" />
 	</dependencies>
     </metadata>
     <files>
